@@ -1,6 +1,12 @@
-# Fifa-Player-Valuation:
+# Fifa-Player-Valuation
 
+## Project Link:
 https://fifaplayermarketvaluation.herokuapp.com/
+
+## Preview:
+
+![fifa](https://user-images.githubusercontent.com/65092287/98266729-a6518e80-1fb0-11eb-879c-7458acc8352c.gif)
+
 
 ## What is Market Value of a Soccer Player?
 
