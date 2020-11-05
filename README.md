@@ -1,4 +1,5 @@
-# Fifa-Player-Valuation
+# Fifa-Player-Valuation:
+
 https://fifaplayermarketvaluation.herokuapp.com/
 
 ## What is Market Value of a Soccer Player?
@@ -45,3 +46,26 @@ Physical: Acceleration, Stamina, Strength, Balance, Sprint Speed, Agility, Jumpi
 Shooting: Heading, Shot Power, Finishing, Long Shots, Curve, Free Kick Accuracy, Penalties, Volleys
 
 Goalkeeping: Positioning, Diving, Handling, Kicking, Reflexes
+
+## Exploratory Data Analysis :
+
+Plotting the heatmap of features and target (Market Value) reveals some interesting trends: Height, Weight, Age, Preferred Foot and Goalkeeping seems to be uncorrelated with the target variable:
+
+![image](https://user-images.githubusercontent.com/65092287/98255668-a8f9b700-1fa3-11eb-8112-c1425b36e821.png)
+
+Thus, the question is should we remove these features? We already understand from domain knowledge that age is an important predictor of Market Value. How about Goalkeeping skills? Note that Goalkeeping is negatively correlated with other skill metrics. This is not surprising as goalkeepers are mostly specialized, and are seldom playing on field. However, some of these goalkeepers are highly valued as shown in the pair plot:
+
+![image](https://user-images.githubusercontent.com/65092287/98256212-4ce36280-1fa4-11eb-95aa-5b71bb5e088d.png)
+
+## Model Selection :
+
+Now, to fit the data, the regression models that we wish to compare are Simple Linear Regression,Polynomial Regression and Random forest Regressor.I have split the entire data frame into 80% Training Set and 20% Test set, where I hold out the Test Set for final model evaluation. For model selection, I further randomly split the Training Set into 5-Folds for cross-validation for simple regression and polynomial reggression.
+
+
+## Model Evaluation :
+### I got best score for the model using Random Forest Regressor:
+![image](https://user-images.githubusercontent.com/65092287/98256772-f7f41c00-1fa4-11eb-97d6-032b8fc01cfa.png)
+
+## Conclusion & Future Work
+Nonetheless, the results of the finalized model is rather respectable given the limited features that I used. In the future, should other data sources be available, important features such as on-field position of players and media coefficient should be considered.
+
